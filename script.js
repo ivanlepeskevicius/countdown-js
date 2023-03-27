@@ -84,8 +84,7 @@ function pauseCountdown() {
 }
 
 function goBack() {
-  countdownButtons.style.display = 'block';
-  countdownButtons.classList.add('grid-style'); // add the class to the element
+  countdownButtons.style.display = 'grid';
   startButtons.style.display = 'none';
   clearInterval(intervalId);
   countdownTimer.textContent = "";

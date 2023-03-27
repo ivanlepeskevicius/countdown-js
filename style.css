@@ -101,12 +101,6 @@ button:hover {
   grid-gap: 10px;
 }
 
-.grid-style {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
-}
-
 /* Style the start and pause buttons differently */
 #start-countdown, #pause-countdown {
   background-color: #008CBA; /* Blue */
