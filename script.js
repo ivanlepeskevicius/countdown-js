@@ -12,6 +12,13 @@ let time;
 let intervalId;
 let paused = false;
 
+const timeValues = {
+  'bank-robbery': 30,
+  'high-speed-chase': 60,
+  'hostage-situation': 90,
+  'bomb-defusal': 120
+};
+
 function startTimer(duration) {
   let timer = duration, minutes, seconds;
   countdownTimer.style.display = 'inline-block'; // Display the timer
@@ -38,24 +45,8 @@ function startTimer(duration) {
   }, 1000);
 }
 
-
 function handleCountdownButtonClick(event) {
-  time = 0;
-  const buttonId = event.target.id;
-  switch (buttonId) {
-    case 'bank-robbery':
-      time = 30;
-      break;
-    case 'high-speed-chase':
-      time = 60;
-      break;
-    case 'hostage-situation':
-      time = 90;
-      break;
-    case 'bomb-defusal':
-      time = 120;
-      break;
-  }
+  time = timeValues[event.target.id];
   startButtons.style.display = 'block';
   countdownButtons.style.display = 'none';
   clearInterval(intervalId);
