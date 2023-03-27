@@ -11,13 +11,13 @@ const message = document.getElementById("message");
 let time;
 let intervalId;
 let paused = false;
+//let audio = new Audio(document.getElementById("audio").src); // Create an audio object
 
 function startTimer(duration) {
   let timer = duration, minutes, seconds;
   countdownTimer.style.display = 'inline-block'; // Display the timer
   pauseCountdownButton.style.display = 'inline-block'; // Display the pause button
   const audio = new Audio(document.getElementById("audio").src); // Create an audio object
-  const message = document.getElementById("message"); // Get the message element
 
   intervalId = setInterval(function () {
     if (!paused) { // check if countdown is not paused
@@ -94,6 +94,13 @@ function goBack() {
   startCountdownButton.style.display = 'inline-block';
   pauseCountdownButton.textContent = 'Pause';
   resetCountdownButton.style.display = 'none';
+  message.innerHTML = '';
+  
+  // Stop the audio if it is playing
+  if (audio) {
+    audio.pause();
+    audio.currentTime = 0;
+  }
 }
 
 function resetCountdown() {
@@ -105,6 +112,13 @@ function resetCountdown() {
   paused = false;
   resetCountdownButton.style.display = 'none';
   pauseCountdownButton.textContent = 'Pause';
+  message.innerHTML = '';
+
+  // Stop the audio if it is playing
+  if (audio) {
+    audio.pause();
+    audio.currentTime = 0;
+  }
 }
 
 startButtons.style.display = 'none';
