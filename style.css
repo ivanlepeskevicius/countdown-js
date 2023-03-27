@@ -74,3 +74,45 @@ h1{
     font-size: 3rem;
     font-family: monospace;
   }
+
+  /* Style the buttons */
+button {
+  background-color: #e97704;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* Style the buttons on hover */
+button:hover {
+  background-color: #cf6903;
+}
+
+#countdown-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.grid-style {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+/* Style the start and pause buttons differently */
+#start-countdown, #pause-countdown {
+  background-color: #008CBA; /* Blue */
+}
+
+/* Style the reset and go back buttons differently */
+#reset-countdown, #go-back {
+  background-color: #f44336; /* Red */
+}
