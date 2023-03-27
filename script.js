@@ -6,6 +6,7 @@ const goBackButton = document.getElementById('go-back');
 const countdownTimer = document.getElementById('countdown-timer');
 const countdownButtonElements = document.querySelectorAll('.countdown-button');
 const resetCountdownButton = document.querySelector('#reset-countdown');
+const message = document.getElementById("message");
 
 let time;
 let intervalId;
@@ -14,6 +15,10 @@ let paused = false;
 function startTimer(duration) {
   let timer = duration, minutes, seconds;
   countdownTimer.style.display = 'inline-block'; // Display the timer
+  pauseCountdownButton.style.display = 'inline-block'; // Display the pause button
+  const audio = new Audio(document.getElementById("audio").src); // Create an audio object
+  const message = document.getElementById("message"); // Get the message element
+
   intervalId = setInterval(function () {
     if (!paused) { // check if countdown is not paused
       minutes = parseInt(timer / 60, 10);
@@ -26,27 +31,30 @@ function startTimer(duration) {
 
       if (--timer < 0) {
         clearInterval(intervalId);
-        alert("Time's up!");
+        audio.play(); // Play the audio when the countdown is finished
+        message.textContent = "Time's up!"; // Update the message element
+        pauseCountdownButton.style.display = 'none'; // Hide the pause button once the countdown has finished
       }
     }
   }, 1000);
 }
+
 
 function handleCountdownButtonClick(event) {
   time = 0;
   const buttonId = event.target.id;
   switch (buttonId) {
     case 'bank-robbery':
-      time = 300;
+      time = 30;
       break;
     case 'high-speed-chase':
-      time = 600;
+      time = 60;
       break;
     case 'hostage-situation':
-      time = 900;
+      time = 90;
       break;
     case 'bomb-defusal':
-      time = 1200;
+      time = 120;
       break;
   }
   startButtons.style.display = 'block';

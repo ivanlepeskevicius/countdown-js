@@ -1,5 +1,6 @@
 .container {
     display: flex;
+    background-color: #91b493;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -52,3 +53,9 @@
     content: ":";
   }
   
+  #message {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 3rem;
+    font-family: monospace;
+  }
