@@ -85,7 +85,7 @@ function goBack() {
   pauseCountdownButton.textContent = 'Pause';
   resetCountdownButton.style.display = 'none';
   message.innerHTML = '';
-  
+
   // Stop the audio if it is playing
   if (audio) {
     audio.pause();
@@ -113,7 +113,7 @@ function resetCountdown() {
 
 startButtons.style.display = 'none';
 
-countdownButtonElements.forEach(function(countdownButton) {
+countdownButtonElements.forEach(function (countdownButton) {
   countdownButton.addEventListener('click', handleCountdownButtonClick);
 });
 

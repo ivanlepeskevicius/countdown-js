@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Countdown Timer WebApp</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-    <img id="logo" src="assets/logo.png" alt="Countdown logo">
-    <h1>Countdown Timer</h1>
-    <div id="countdown-buttons">
-        <button id="bank-robbery" class="countdown-button">Bank Robbery</button>
-        <button id="high-speed-chase" class="countdown-button">High-speed Chase</button>
-        <button id="hostage-situation" class="countdown-button">Hostage Situation</button>
-        <button id="bomb-defusal" class="countdown-button">Bomb Defusal</button>
-      </div>
-      
-      <div id="start-buttons" style="display: none;">
-        <button id="start-countdown">Start</button>
-        <button id="pause-countdown">Pause</button>
-        <button id="reset-countdown">Reset</button>
-        <button id="go-back">Go back</button>
-      </div>
-      
-      <div id="countdown-timer">
-        <div id="timer-clock">
-          <span id="timer-minutes">00</span>:
-          <span id="timer-seconds">00</span>
+        <img id="logo" src="assets/logo.png" alt="Countdown logo">
+        <h1>Countdown Timer</h1>
+        <div id="countdown-buttons">
+            <button id="bank-robbery" class="countdown-button" name="Bank Robbery">Bank Robbery</button>
+            <button id="high-speed-chase" class="countdown-button" name="High-speed Chase">High-speed Chase</button>
+            <button id="hostage-situation" class="countdown-button" name="Hostage Situation">Hostage Situation</button>
+            <button id="bomb-defusal" class="countdown-button" name="Bomb Defusal">Bomb Defusal</button>
         </div>
-      </div>
-      <div id="message"></div>
+
+        <div id="start-buttons" style="display: none;">
+            <button id="start-countdown">Start</button>
+            <button id="pause-countdown">Pause</button>
+            <button id="reset-countdown">Reset</button>
+            <button id="go-back">Go back</button>
+        </div>
+
+        <div id="countdown-timer">
+            <div id="timer-clock">
+                <span id="timer-minutes">00</span>:
+                <span id="timer-seconds">00</span>
+            </div>
+        </div>
+        <div id="message"></div>
     </div>
     <script src="script.js"></script>
     <audio id="audio" src="assets/alarm.mp3"></audio>
-  </body>
+</body>
+
 </html>
